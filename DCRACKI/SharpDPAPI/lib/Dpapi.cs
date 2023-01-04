@@ -12,9 +12,6 @@ namespace SharpDPAPI
         public static byte[] CalculateKeys(string password, string userSID, 
             bool pth = false, bool domain = true)
         {
-            Console.WriteLine($"[*] Is Domain Joined: {domain}");
-            Console.WriteLine($"[*] Pass-the-Hash mode: {pth}");
-
             var utf16pass = Encoding.Unicode.GetBytes(password);
             var utf16sid = Encoding.Unicode.GetBytes(userSID);
 
